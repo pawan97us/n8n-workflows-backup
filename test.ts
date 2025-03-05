@@ -50,6 +50,14 @@ export class Utilities extends BasePage {
     await this.setTextByLocator(this.durationInput, size.toString())
   }
 
+  public async setEditTicketDetailsDuration(size: number) {
+    await this.setTextByLocator(this.durationInputEdit, size.toString())
+  }
+
+  public async setTicketDetailsDurationFloat(size: string) {
+    await this.setTextByLocator(this.durationInput, size.toString())
+  }
+
   public async checkLocatorVisible(locator: Locator) {
     await expect(locator).toBeVisible({ timeout: this.THIRTY_SECONDS });
   }
