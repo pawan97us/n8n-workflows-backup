@@ -24,6 +24,10 @@ export class Utilities extends BasePage {
     await locator.click({ timeout: this.THIRTY_SECONDS });
   }
 
+  public async clickButtonByLocator(locator: Locator) {
+    await locator.click({ timeout: this.THIRTY_SECONDS });
+  }
+
   public async doubleClickByLocator(locator: Locator) {
     await locator.dblclick({ timeout: this.THIRTY_SECONDS });
   }
