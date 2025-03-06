@@ -24,6 +24,10 @@ export class Utilities extends BasePage {
     await locator.click({ timeout: this.THIRTY_SECONDS });
   }
 
+  public async clickButtonByLocator(locator: Locator) {
+    await locator.click({ timeout: this.THIRTY_SECONDS });
+  }
+
   public async doubleClickByLocator(locator: Locator) {
     await locator.dblclick({ timeout: this.THIRTY_SECONDS });
   }
@@ -70,6 +74,13 @@ export class Utilities extends BasePage {
     await expect.soft(locator).not.toBeVisible({ timeout: this.THIRTY_SECONDS });
   }
 
+  public async setExtendedTimeout(duration: number) {
+    await this.page.waitForTimeout(duration);
+  }
+
+  public async checkLocatorNotVisible(locator: Locator) {
+    await expect.soft(locator).not.toBeVisible({ timeout: this.THIRTY_SECONDS });
+  }
   public async setTextByLocator(locator: Locator, value: string) {
     await locator.fill(value, { timeout: this.THIRTY_SECONDS });
   }
