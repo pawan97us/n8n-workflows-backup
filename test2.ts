@@ -147,6 +147,7 @@ export class Utilities extends BasePage {
     await this.page.getByRole('tab', { name: linkName }).click({ timeout: 30000 });
   }
   public async tabMenuItem(linkName: string) {
+    console.log("TEST")
     await this.page.getByRole('tab', { name: linkName }).click({ timeout: 30000 });
   }
   formatDateToExpectedFormat(date: Date): string {
