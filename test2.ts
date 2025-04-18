@@ -137,6 +137,12 @@ export class Utilities extends BasePage {
     await this.clickButtonByLocator(nextMonthDate);
   }
   
+  public async setReportStartDateEnd() {
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const now = new Date();
+    const nextMonthDate = this.page?.getByLabel(`${monthNames[now.getMonth()]} 30,`);
+    await this.clickButtonByLocator(nextMonthDate);
+  }
   public async tabMenuItem(linkName: string) {
     await this.page.getByRole('tab', { name: linkName }).click({ timeout: 30000 });
   }
