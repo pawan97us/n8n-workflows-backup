@@ -127,6 +127,7 @@ export class Utilities extends BasePage {
     await this.clickButtonByLocator(currMonth);
     const currDay = this.page?.locator('.mat-calendar-body-cell-content', { hasText: day }).first();
     await this.clickButtonByLocator(currDay);
+    console.log("Test code")
   }
 
   public async setReportStartDateEnd() {

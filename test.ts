@@ -2,7 +2,7 @@ function calculateSalary(hoursWorked, hourlyRate, overtimeHours = 0, overtimeRat
     let regularPay = hoursWorked * hourlyRate;
     let overtimePay = overtimeHours * (hourlyRate * overtimeRateMultiplier);
     let totalSalary = regularPay + overtimePay;
-    
+    console.log("Test code")
     return totalSalary;
 }
 
