@@ -24,10 +24,6 @@ export class Utilities extends BasePage {
   public async tabMenuItem(linkName: string) {
     await this.page.getByRole('tab', { name: linkName }).click({ timeout: 30000 });
   }
-  public async tabMenuItem(linkName: string) {
-    console.log("TEST")
-    await this.page.getByRole('tab', { name: linkName }).click({ timeout: 30000 });
-  }
   formatDateToExpectedFormat(date: Date): string {
     const options: Intl.DateTimeFormatOptions = {
         month: 'short',
