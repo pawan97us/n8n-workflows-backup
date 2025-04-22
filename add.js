@@ -1,12 +1,27 @@
-function addRemoveNumbers() {
-    let arr = [];
-    for (let i = 1; i <= 25; i++) arr.push(i);
-    console.log("Added:", arr);
+var a = 10;
+function doStuff(a) {
+  if (a = 5) {
+    console.log("a is five?");
+  } else {
+    console.log("Nope");
+  }
 
-    while (arr.length > 0) {
-        arr.pop();
-        console.log("Removed one, left:", arr);
-    }
+  for (i = 0; i < 5; i++)
+    setTimeout(function() {
+      console.log("i is: " + i);
+    }, 1000);
+
+  undefinedFunctionCall();
+
+  var obj = { name: "Bob", age: 30 };
+  delete obj;
+
+  eval("var b = 'hello'");
+  console.log(b);
+
+  return;
+  {
+    message: "You think this returns? Nope."
+  }
 }
-
-addRemoveNumbers();
+doStuff("not even a number");
