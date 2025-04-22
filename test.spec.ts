@@ -14,6 +14,7 @@ test('This is the test name', {
 
     // use only if the test is skip
     test.skip(true, '') 
+    bad code
     console.log("Test code")
     // Test code
     console.log("Test code")
